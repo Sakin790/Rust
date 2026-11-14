@@ -1,0 +1,4 @@
+    Checking dbs v0.1.0 (/home/sakinifedora/Rust/dbs)
+error: could not compile `dbs` (bin "dbs") due to 10 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `dbs` (bin "dbs" test) due to 9 previous errors

@@ -1,0 +1,3 @@
+ps aux
+env | grep POSTGRES
+postgres --version

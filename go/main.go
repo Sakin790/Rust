@@ -6,30 +6,24 @@ import (
 
 func main() {
 
-	score := []int{1000, 2000, 3000, 4000, 5000}
-
-	for index, value := range score {
-
-		fmt.Println(index, value)
+	player := map[string]int{
+		"Messi":   10,
+		"Rolando": 7,
+		"Neymar":  10,
 	}
 
-	fmt.Println("Out of Loops")
+	fmt.Println(player)
 
-	price := map[string]int{
-
-		"apple":  21,
-		"banana": 32,
-		"guava":  32,
-	}
-
-	for key, value := range price {
+	for key, value := range player {
 
 		fmt.Println(key, value)
 	}
+	fmt.Println(len(player))
 
-	_, exist := price["manngo"]
+	_, exist := player["mBappay"]
+
 	if exist {
-		fmt.Println("Key exist bro")
+		fmt.Println("Key exist")
 	} else {
 		fmt.Println("Key dose not exist")
 	}

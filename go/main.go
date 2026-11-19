@@ -1,31 +1,28 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+type User struct {
+	Id   int
+	Name string
+}
+
+type Namer interface {
+	chnageName(name string)
+	getName() string
+}
+
+func (u *User) changeName(nm string) {
+	u.Name = nm
+}
 
 func main() {
-
-	player := map[string]int{
-		"Messi":   10,
-		"Rolando": 7,
-		"Neymar":  10,
+	p1 := User{
+		Id:   1,
+		Name: "Sakin",
 	}
+	fmt.Println(p1)
 
-	fmt.Println(player)
-
-	for key, value := range player {
-
-		fmt.Println(key, value)
-	}
-	fmt.Println(len(player))
-
-	_, exist := player["mBappay"]
-
-	if exist {
-		fmt.Println("Key exist")
-	} else {
-		fmt.Println("Key dose not exist")
-	}
-
+	p1.changeName("Mahid")
+	fmt.Println(p1)
 }
